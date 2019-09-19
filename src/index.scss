@@ -1,0 +1,14 @@
+$pattern-width: var(--pattern-width, 0.5rem);
+$pattern-space: var(--pattern-space, 1rem);
+$pattern-color-primary: var(--pattern-color-primary, white);
+$pattern-color-secondary: var(--pattern-color-secondary, transparent);
+$pattern-total: var(--pattern-total, calc((#{$pattern-width} * 2) + #{$pattern-space}));
+$pattern-size: var(--pattern-size, 1rem);
+$pattern-size-temp: var(--pattern-size-temp, calc((#{$pattern-size} / 8) * 9));
+
+@import "dots";
+@import "checkered";
+@import "cubes";
+@import "zigzag";
+@import "houndstooth";
+@import "lines";

@@ -1,0 +1,13 @@
+@mixin pattern-dots() {
+	background-image: radial-gradient(#{$pattern-primary-color} 25%, transparent 25%),
+		radial-gradient(#{$pattern-primary-color} 25%, #{$pattern-secondary-color} 25%);
+	background-repeat: repeat;
+	background-position: 0 0,
+		calc(#{$pattern-size} * 2) calc(#{$pattern-size} * 2);
+	background-size: calc(#{$pattern-size} * #{$pattern-spacing})
+			calc(#{$pattern-size} * #{$pattern-spacing}),
+		calc(#{$pattern-size} * #{$pattern-spacing})
+			calc(#{$pattern-size} * #{$pattern-spacing});
+}
+
+
