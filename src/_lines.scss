@@ -1,24 +1,9 @@
 @mixin pattern-lines {
-	background-image: linear-gradient(
-			to right bottom,
-			transparent calc(100% - (#{$pattern-width} / 2)),
-			#{$pattern-color-primary} calc(100% - (#{$pattern-width} / 2)),
-			#{$pattern-color-primary}
-		),
-		linear-gradient(
-			to right bottom,
-			transparent calc(50% - (#{$pattern-width} / 2)),
-			#{$pattern-color-primary} calc(50% - (#{$pattern-width} / 2)),
-			#{$pattern-color-primary} calc(50% + (#{$pattern-width} / 2)),
-			transparent calc(50% + (#{$pattern-width} / 2))
-		),
-		linear-gradient(
-			to right bottom,
-			#{$pattern-color-primary},
-			#{$pattern-color-primary} calc(#{$pattern-width} / 2),
-			#{$pattern-color-secondary} calc(#{$pattern-width} / 2)
-		);
-	background-repeat: repeat;
-
-	background-size: #{$pattern-size};
+	background-image: repeating-linear-gradient(
+		#{$pattern-rotation},
+		#{$pattern-color-primary},
+		#{$pattern-color-primary} #{$pattern-width},
+		#{$pattern-color-secondary} #{$pattern-width},
+		#{$pattern-color-secondary} #{$pattern-total}
+	);
 }
